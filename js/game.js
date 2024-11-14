@@ -529,12 +529,13 @@ function updateTimerSound(){
  * 
  * SAVE IMAGE - This is the function that runs to download puzzle photo
  * 
- */
+ 
 function saveImagePhp(){
 	puzzleContainer.cache(0,0,gameData.frameWidth,gameData.frameHeight);
-	var data = puzzleContainer.getCacheDataURL();
+	//var data = puzzleContainer.getCacheDataURL();
+	var data = puzzleContainer.cacheCanvas.toDataURL();
 	puzzleContainer.uncache();
-	data = data.substr(data.indexOf(',') + 1).toString();
+	//data = data.substr(data.indexOf(',') + 1).toString();
          
 	var dataInput = document.createElement("input") ;
 	dataInput.setAttribute("name", 'imgdata') ;
@@ -571,7 +572,8 @@ function uploadImage(action){
 			uploadProgress = true;
 			txtShare.text = processShareText;
 			puzzleContainer.cache(0,0,gameData.frameWidth,gameData.frameHeight);
-			var imgData = puzzleContainer.getCacheDataURL();
+			//var imgData = puzzleContainer.getCacheDataURL();
+			var imgData = puzzleContainer.cacheCanvas.toDataURL();
 			puzzleContainer.uncache();
 			
 			$.ajax({
