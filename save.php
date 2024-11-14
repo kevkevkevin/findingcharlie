@@ -7,8 +7,10 @@
      
     #capture, replace any spaces w/ plusses, and decode
     $encoded = $_POST['imgdata'];
-    $encoded = str_replace(' ', '+', $encoded);
-    $decoded = base64_decode($encoded);
+    
+	$img = str_replace('data:image/png;base64,', '', $encoded);
+	$img = str_replace(' ', '+', $img);
+	$decoded = base64_decode($img);
      
     #write decoded data
     echo $decoded;
