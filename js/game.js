@@ -23,7 +23,7 @@ var countdownMode = true; //enable countdown mode
 var elapsedTimeMode = true; //enabled elapsed time mode (for countdownmode only)
 var resultCompleteText = 'STAGE[LEVEL] COMPLETE:\nYou found CHARLIE! in [TIME]!'; //result complete text
 var resultFailText = 'GAME OVER:\nYou failed to find CHARLIE! you piece of SH**'; //result fail text
-var puzzleFileName = 'findingCHARLIE'; //download puzzle photo filename
+var puzzleFileName = 'findingcharlie'; //download puzzle photo filename
 var processShareText = 'Please wait...'; //process share image text
 
 //Social share, [SCORE] will replace with game time
